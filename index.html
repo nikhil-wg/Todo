@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="bg-contaier">
+      <div class="img-1"></div>
+    </section>
+    <div class="top">
+      <button
+        id="btn"
+        onclick="document.getElementById('id01').style.display='block'"
+        style="width: auto"
+      >
+        Add todo
+      </button>
+      <h1>TODO</h1>
+    </div>
+
+    <!-- todo contaier -->
+    <section class="contaier">
+      <ul class="tasklist" id="ul">
+        <li class="task">
+          <h1>
+            this is task 1
+            <span style="background-color: red">!</span>
+          </h1>
+          <p>this is information about taks</p>
+          <i class="fa fa-trash" aria-hidden="true" style="color: red"></i>
+        </li>
+      </ul>
+    </section>
+
+    <!-- add task  -->
+    <div id="id01" class="modal" class="popupTODO closePopup">
+      <div class="todo-con">
+        <form action="">
+          <div>
+            <label for=""><b>Todo name</b></label
+            ><br />
+            <input type="text" id="todo" id="todoName" />
+          </div>
+          <div>
+            <label for=""><b>Description</b></label
+            ><br />
+            <input type="text" id="todo-des" id="todoName" />
+          </div>
+          <div>
+            <label for=""><b>priority</b></label
+            ><br />
+            <select id="prior" id="todoPriority">
+              <option value="p1">High</option>
+              <option value="p2">Medium</option>
+              <option value="p3">Low</option>
+            </select>
+          </div>
+          <center>
+            <button id="addtodo" type="button">save</button>
+            <button
+              class="close"
+              type="button"
+              style="background-color: red"
+              onclick="document.getElementById('id01').style.display='none'"
+            >
+              close
+            </button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
